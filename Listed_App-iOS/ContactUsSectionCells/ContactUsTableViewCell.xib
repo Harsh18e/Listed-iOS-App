@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactUsCell" rowHeight="85" id="KGk-i7-Jjw" customClass="ContactUsTableViewCell" customModule="Listed_App_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="376" height="85"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ukb-6Y-9nh" customClass="CustomUIView" customModule="Listed_App_iOS" customModuleProvider="target">
+                        <rect key="frame" x="16" y="8" width="344" height="67"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whatsapp_icon" translatesAutoresizingMaskIntoConstraints="NO" id="siK-gX-f0R">
+                                <rect key="frame" x="16" y="19.666666666666671" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="a0m-2b-Ago"/>
+                                    <constraint firstAttribute="height" constant="28" id="xhI-jO-Slf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Talk With Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IP5-tE-5lc">
+                                <rect key="frame" x="68" y="23" width="94.666666666666686" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8901960784313725" green="0.94509803921568625" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="IP5-tE-5lc" firstAttribute="centerY" secondItem="Ukb-6Y-9nh" secondAttribute="centerY" id="60G-GH-0Mh"/>
+                            <constraint firstItem="IP5-tE-5lc" firstAttribute="leading" secondItem="siK-gX-f0R" secondAttribute="trailing" constant="24" id="hrQ-0m-4KJ"/>
+                            <constraint firstItem="siK-gX-f0R" firstAttribute="centerY" secondItem="Ukb-6Y-9nh" secondAttribute="centerY" id="lJf-PT-T2n"/>
+                            <constraint firstItem="siK-gX-f0R" firstAttribute="leading" secondItem="Ukb-6Y-9nh" secondAttribute="leading" constant="16" id="wYN-Kf-gYR"/>
+                            <constraint firstAttribute="height" constant="67" id="xgX-Lg-Q6X"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" systemColor="systemGreenColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.80000000000000004"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Ukb-6Y-9nh" secondAttribute="bottom" constant="8" id="2oi-WK-xnJ"/>
+                    <constraint firstItem="Ukb-6Y-9nh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="pCo-8y-9XV"/>
+                    <constraint firstItem="Ukb-6Y-9nh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="q8e-07-6Xc"/>
+                    <constraint firstAttribute="trailing" secondItem="Ukb-6Y-9nh" secondAttribute="trailing" constant="16" id="ug2-BU-nlN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="contactLabel" destination="IP5-tE-5lc" id="ag5-jE-oMp"/>
+                <outlet property="containerView" destination="Ukb-6Y-9nh" id="646-vo-7m1"/>
+                <outlet property="iconImageView" destination="siK-gX-f0R" id="XdJ-Fa-1d3"/>
+            </connections>
+            <point key="canvasLocation" x="141.98473282442748" y="82.042253521126767"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="whatsapp_icon" width="24" height="24"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
