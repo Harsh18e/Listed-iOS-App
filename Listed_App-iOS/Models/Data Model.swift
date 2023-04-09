@@ -11,11 +11,11 @@ import Foundation
 struct Response: Codable {
     let status: Bool
     let statusCode: Int
-    let message, supportWhatsappNumber: String
-    let extraIncome: Double
-    let totalLinks, totalClicks, todayClicks: Int
-    let topSource, topLocation, startTime: String
-    let linksCreatedToday: Int
+    let message, supportWhatsappNumber: String?
+    let extraIncome: Double?
+    let totalLinks, totalClicks, todayClicks: Int?
+    let topSource, topLocation, startTime: String?
+    let linksCreatedToday: Int?
     let data: DataClass
 
     enum CodingKeys: String, CodingKey {
@@ -48,15 +48,15 @@ struct DataClass: Codable {
 // MARK: - Link
 struct Link: Codable {
     let urlID: Int
-    let webLink: String
-    let smartLink, title: String
-    let totalClicks: Int
-    let originalImage: String
+    let webLink: String?
+    let smartLink, title: String?
+    let totalClicks: Int?
+    let originalImage: String?
     let thumbnail: JSONNull?
-    let timesAgo, createdAt: String
+    let timesAgo, createdAt: String?
     let domainID: DomainID
     let urlPrefix: String?
-    let urlSuffix, app: String
+    let urlSuffix, app: String?
 
     enum CodingKeys: String, CodingKey {
         case urlID = "url_id"

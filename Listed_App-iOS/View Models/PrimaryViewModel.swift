@@ -96,7 +96,7 @@ class PrimaryViewModel {
         
         for link in decodedData.data.topLinks {
             counts1 += 1
-            let url = link.originalImage
+            guard let url = link.originalImage else {return}
             NetworkManager.shared.downloadImage(from: url) { [weak self] image, error in
                 if let error = error {
                         // Handle the error
@@ -113,7 +113,7 @@ class PrimaryViewModel {
         }
         for link in decodedData.data.recentLinks {
             counts2 += 1
-            let url = link.originalImage
+            guard let url = link.originalImage else {return}
             NetworkManager.shared.downloadImage(from: url) { [weak self] image, error in
                 if let error = error {
                         // Handle the error

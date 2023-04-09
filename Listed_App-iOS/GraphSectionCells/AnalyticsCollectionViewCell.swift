@@ -21,23 +21,25 @@ class AnalyticsCollectionViewCell: UICollectionViewCell {
     }
     func setupUI(_ index: Int) {
         
+        guard let data = viewModel?.decodedData else {return}
+        
         switch index {
         case 0:
-            headingLabel.text = String(describing: (viewModel?.decodedData?.totalClicks) ?? 0)
+            headingLabel.text = String(describing: (data.todayClicks) ?? 0)
             iconView.image = UIImage(named: "Avatar")
-            subtitleLabel.text = "Total Clicks"
+            subtitleLabel.text = "Todays Clicks"
         case 1:
-            headingLabel.text = "Bengaluru"
+            headingLabel.text = String(describing: data.topLocation ?? "N/A")
             iconView.image = UIImage(named: "location_image")
             subtitleLabel.text = "Top Location"
         case 2:
-            headingLabel.text = "Instagram"
+            headingLabel.text = String(describing: data.topSource ?? "N/A")
             iconView.image = UIImage(named: "globe_image")
             subtitleLabel.text = "Top Source"
         case 3:
-            headingLabel.text = "11:00 - 12:00"
-            iconView.image = UIImage(named: "location_image")
-            subtitleLabel.text = "Top Location"
+            headingLabel.text = String(describing: data.startTime ?? "N/A")
+            iconView.image = UIImage(named: "clock_image")
+            subtitleLabel.text = "Best Time"
         default:
             break
         }

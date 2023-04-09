@@ -7,32 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "00FB4E83-7012-475C-962C-61069072263C"
+            uuid = "2FBBC974-C07B-40E8-A491-D92507306BBB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Listed_App-iOS/SampleSectionCells/SampleSectionTableViewCell.swift"
+            filePath = "Listed_App-iOS/GraphSectionCells/GraphTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "setUI()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "94DA96F5-D867-4D25-B7A0-BC52CC56B715"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Listed_App-iOS/SampleSectionCells/SampleSectionTableViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "setUI()"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "setupGraphUI()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

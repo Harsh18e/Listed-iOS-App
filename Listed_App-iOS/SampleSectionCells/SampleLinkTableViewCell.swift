@@ -52,9 +52,9 @@ class SampleLinkTableViewCell: UITableViewCell {
     private func setupUI() {
         guard let linkData = linkData else {return}
         
-        linkNameLabel.text = linkData.title
-        linkClicksLabel.text = String(describing: linkData.totalClicks)
-        linkLabel.text = linkData.webLink
+        linkNameLabel.text = linkData.title ?? "No Title"
+        linkClicksLabel.text = String(describing: linkData.totalClicks ?? 0)
+        linkLabel.text = linkData.webLink ?? "No Link Available"
         
         let image = viewModel?.getImageAtId(linkData.urlID)
         let imageView = UIImageView(image: image)
