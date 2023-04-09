@@ -9,7 +9,10 @@ import UIKit
 
 class GraphTableViewCell: UITableViewCell, ViewModelDelegate {
     func updateUI() {
-        collectionView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {return}
+            self.collectionView.reloadData()
+        }
     }
     
     @IBOutlet weak var dateRangeLabel: UILabel!
@@ -87,7 +90,7 @@ extension GraphTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "analyticsCollectionCell", for: indexPath) as! AnalyticsCollectionViewCell
-        cell.setupUI(indexPath.row)
+        cell.cellIndex = indexPath.row
         cell.viewModel = viewModel
         return cell
     }
