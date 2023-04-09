@@ -59,7 +59,7 @@ class LineGraphView: UIView {
             context?.strokePath()
             
             // Draw Y-axis labels for numbers
-            let label = UILabel(frame: CGRect(x: 0 - columnSpacing - 16, y: y - 10, width: 30, height: 20))
+            let label = UILabel(frame: CGRect(x: 0 - columnSpacing - 8, y: y - 10, width: 30, height: 20))
             label.textAlignment = .right
             label.font = UIFont.systemFont(ofSize: 10)
             label.textColor = UIColor.lightGray

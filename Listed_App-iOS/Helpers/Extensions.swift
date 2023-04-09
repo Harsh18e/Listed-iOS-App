@@ -345,6 +345,18 @@ extension String {
         dateFormatter.dateFormat = "dd/MM"
         return dateFormatter.string(from: date)
     }
+    
+    func convertToDateInWords() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+            
+        if let date = dateFormatter.date(from: self) {
+            dateFormatter.dateFormat = "dd MMM"
+            return dateFormatter.string(from: date)
+        } else {
+            return self
+        }
+    }
 }
 
 

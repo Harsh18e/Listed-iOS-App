@@ -12,7 +12,7 @@ class GraphTableViewCell: UITableViewCell, ViewModelDelegate {
         collectionView.reloadData()
     }
     
-    
+    @IBOutlet weak var dateRangeLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var greetingsLabel: UILabel!
     @IBOutlet weak var graphView: UIView!
@@ -58,7 +58,10 @@ class GraphTableViewCell: UITableViewCell, ViewModelDelegate {
             cgFloatValues.append(CGFloat(i.value))
         }
         lineGraphView.data = cgFloatValues
-        lineGraphView.dates = sortedData.map { $0.key }
+        let newDates = sortedData.map { $0.key }
+        lineGraphView.dates = newDates
+        
+        dateRangeLabel.text = (newDates.first?.convertToDateInWords() ?? "") + " - " + (newDates.last?.convertToDateInWords() ?? "")
 
         lineGraphView.lineColor = .systemBlue
         graphView.addSubview(lineGraphView)
