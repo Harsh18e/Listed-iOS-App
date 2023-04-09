@@ -70,7 +70,6 @@ class LineGraphView: UIView {
         // Draw the line chart
         context?.setStrokeColor(lineColor.cgColor)
         context?.setLineWidth(lineWidth)
-        let shadowColor = UIColor(red: 0, green: 0, blue: 1, alpha: 0.3)
         context?.setShadow(offset: CGSize(width: 0, height: 30), blur: 32, color: UIColor.blue.cgColor) // Add shadow to the line
         let maxValue = data.max() ?? 1
         let xSpacing = rect.width / CGFloat(data.count - 1)

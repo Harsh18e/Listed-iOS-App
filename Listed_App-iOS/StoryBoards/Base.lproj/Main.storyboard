@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GvY-VN-kkW" userLabel="Container View" customClass="CustomUIView" customModule="Listed_App_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="134" width="393" height="660"/>
+                                <rect key="frame" x="0.0" y="134" width="393" height="651"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dY7-mE-QSU">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="636"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="627"/>
                                         <color key="backgroundColor" red="0.96078431610000004" green="0.96078431610000004" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
@@ -73,7 +73,7 @@
                             <constraint firstItem="8As-2J-jIJ" firstAttribute="centerY" secondItem="t9d-uz-tim" secondAttribute="centerY" id="Whx-PT-WwX"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="downloads" id="YB6-Fb-qQc">
+                    <tabBarItem key="tabBarItem" id="YB6-Fb-qQc">
                         <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <connections>
